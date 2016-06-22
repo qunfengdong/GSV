@@ -69,7 +69,7 @@ If you use different database settings, please refer to the MySQL document for i
 Section III: Set up the Genome Synteny Viewer
 -----------------------------------------
 
-1. Download the source code from GSV website http://cas-bioinfo.cas.unt.edu/gsv/software.php
+1. Download the source code from GSV website http://bioinfo.lumc.edu/gsv/software.php
 
 2. Unzip the file gsv.v1.2.tar.gz, this should create a folder called 'gsv'.
 ```shell
@@ -112,7 +112,7 @@ The script cleanup.php will be executed at 4.30 AM everyday morning.
 
 Section IV: Additional notes:
 
-1. For trouble shooting, please use contact details at http://cas-bioinfo.cas.unt.edu/gsv/support.php 
+1. For trouble shooting, please use contact details at http://bioinfo.lumc.edu/gsv/support.php 
 2. Refer to ARCHITECTURE.txt file to understand the architecture of GSV.
-3. Read FAQs at http://cas-bioinfo.cas.unt.edu/gsv/faq.php 
+3. Read FAQs at http://bioinfo.lumc.edu/gsv/faq.php 
 
