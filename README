@@ -1,0 +1,3 @@
+The GSV web server is accessible at http://cas-bioinfo.cas.unt.edu/gsv and the open-sourced software is also available from the web site for local installation under the terms of the GNU General Public License (http://www.gnu.org/licenses/gpl.html). GSV is portable across Linux distributions, and compatible with PHP 5.2.6 (or higher version) and MySQL 5.0 (or higher version). GSV installation has been tested on Debian Lenny and Ubuntu Lynx. GSV can be viewed with FireFox 3.6.15, Safari 3.0, Internet Explorer 7.0 and Chrome 11.0. The GSV website will be updated to contain the latest information on operating systems and software compatibility.
+
+Refer to INSTALLATION file for GSV installation.

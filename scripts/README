@@ -1,0 +1,83 @@
+README
+------
+
+DISCLAIMER: We hope that the information on these script pages is valuable to you. Your use of this is at your sole risk. All documentation on these pages is provided "as -is", without any warranty, whether express or implied, of its accuracy, completeness, fitness for a particular purpose, title or non-infringement, and none of the third-party products or information mentioned in the work are authored, recommended, supported or guaranteed by us. Further, we shall not be liable for any damages you may sustain by using this information, whether direct, indirect, special, incidental or consequential, even if it has been advised of the possibility of such damages.
+
+Perl scripts
+==============
+GFF3parser.pl 
+==============
+
+Required Files:
+1. GFF3 file of a particular organism
+2. Configuration File, it stores information regarding the features which u are interested in along with shape and color to be associated with it.
+	- Format of the configuration file, it has 3 columns separated by tabs
+	- Column 1, feature name as mentioned in GFF3 file, e.g., gene, CDSm microarray_oligo
+	- Column 2, the feature will be displayed in this shape. e.g., box, arrow
+	- Column 3, the feature will be displayed in this color, e.g., red, blue, green
+		--------------------------------------------
+		gene	arrow	red
+		CDS	box	blue
+		microarray_oligo	xyplot	green
+		--------------------------------------------
+
+Usage: GFF3parser.pl -n <name> -i <gff3_file> -c <configuration_file> -o <output_file>
+
+-n	<name>
+	Name of the species, For example, Homo Sapiens Chromosome 3 can be named as HS3
+-i <gff3 file>
+	path to GFF3 file of a perticular organism
+-c <configuration_file>
+	path to configuration file
+-o <output_file>
+	output file
+
+To generate the annotation.txt
+$ cat [all_GFF3parser_output_files] > annotation.txt
+
+- all_output_files, consist of all the GFF3parser.pl output files
+
+===============
+BLASTparser.pl
+===============
+Required Files:
+1. BLAST output file
+- Make sure the BLAST output was generated between a single query sequence and a single database sequence
+- The BLAST should be done using the -m 9 parameter
+
+Usage: BLASTparser.pl -r <query_genome> -t <hit_genome> -i <blout_file> -o <output_file>
+
+-r <query_genome>
+	Name of the query sequences
+	If annotation information is available, make sure it is exactly the same as GFF3 -n <name>
+-t <hit_genome>
+	Name od the hit sequence
+	If annotation information is available, make sure it is exactly the same as GFF3 -n <name>
+-i <blout_file>
+	Path to the BLAST output file
+-o <output_file>
+	Path to the output file
+
+================
+BLASTZparser.pl
+================
+Requried files:
+1. BLASTZ output file
+- Make sure the BLAST output was generated between a single query sequence and a single database sequence
+
+-r <query_genome>
+	Name of the query sequences
+	If annotation information is available, make sure it is exactly the same as GFF3 -n <name>
+-t <hit_genome>
+	Name od the hit sequence
+	If annotation information is available, make sure it is exactly the same as GFF3 -n <name>
+-i <blout_file>
+	Path to the BLASTZ output file
+-o <output_file>
+	Path to the output file
+
+To generate the synteny.txt
+$ cat [all_BLAST_or_BLASTZ_output_files] > synteny.txt
+
+
+
