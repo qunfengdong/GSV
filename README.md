@@ -11,12 +11,15 @@ Section I: Install Prerequisites
 --------------------------------
 
 On our Ubuntu OS, Apache, PHP, GD library and MySQL was installed using apt-get. The commands are listed below. You can also use yum, rpm or dpkg etc depending on the operating system, speak to your systems administrator about it.
+
+'''python
 	shell> sudo apt-get install apache2
 	shell> sudo apt-get install php5
 	shell> sudo apt-get install libapache2-mod-php5
 	shell> sudo apt-get install mysql-server
 	shell> sudo apt-get install php5-mysql
 	shell> sudo apt-get install php5-gd
+'''
 
 Section II: MySQL Database Setup
 --------------------------------
