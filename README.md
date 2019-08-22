@@ -1,3 +1,61 @@
+# Environment Construction Tutorial
+* Credit to [Jiawei Li](17818521030@163.com)
+
+To run GSV and mGSV, you need to install **PHP5.3.20 or higher but no more than PHP5.50 + Apache or Nginx + MySQL** and make sure that **PHP has the MySQL extension and GD extension enabled**. Because mGSV needs to use MySQL extensions to operate on MySQL, store collinear data and use the GD library to draw the picture.
+
+If your existing php version is php7 or is not installed PHP, you should build an environment that can use PHP5 because PHP5 and PHP7 have big differences, PHP7 has abandoned some extension libraries. For example, the mysql extension in PHP5 has been deprecated in PHP7 and replaced with the mysqli extension. This will causes a series of mysql extension functions in the GSV and mGSV script code to be unavailable, causing an error.
+
+The following is a tutorial on configuring the environment required to run the GSV and mGSV in **CentOS**.
+
+* **Note: Requires root privileges**
+
+## Section I: Install Nginx
+
+* Install gcc and g++
+
+```bash
+yum -y install gcc automake autoconf libtool make
+yum install gcc gcc-c++
+```
+* Install PCRE
+```bash
+cd /usr/local/src
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
+tar -xzvf pcre-8.39.tar.gz
+cd pcre-8.39
+./configure
+make
+make install
+```
+* Install zlib
+```bash
+cd /usr/local/src
+ wget http://zlib.net/zlib-1.2.11.tar.gz
+tar -xzvf zlib-1.2.11.tar.gz
+cd zlib-1.2.11
+./configure
+make
+make install
+```
+* Install Nginx
+```bash
+cd /usr/local/src
+wget http://nginx.org/download/nginx-1.1.10.tar.gz
+tar -zxvf nginx-1.1.10.tar.gz
+cd nginx-1.1.10
+./configure
+make
+make install
+```
+* Configure Nginx
+* Because I installed Apache before and Apache uses port 80. So I configured Nginx to use port 8089.
+
+```bash
+vim /usr/local/nginx/conf/nginx.conf
+```
+
+![nginxConfig]("https://github.com/qunfengdong/GSV/blob/master/img/nginxConfig.png")
+
 System Requirements
 -------------------
 
