@@ -159,28 +159,17 @@ phpinfo();
 
 # GSV Installation Guide
 
-## System Requirements
+## Section I: System Requirements
 
 The current version of Genome Synteny Viewer was only tested on Ubuntu 10.04 OS. The minimum requirements include: 
 * Apache 1.3 or higher (http://www.apache.org)
-* PHP 5.2 or higher (http://www.php.net/)
+* PHP 5.3.20 or higher but no more than PHP5.50 (http://www.php.net/)
 * MySQL 5.0 or higher (http://dev.mysql.com/)
 * GD library. (http://php.net/manual/en/book.image.php)
 
+NOTE：PHP must have the MySQL extension and GD extension enabled
+
 If you successfully completed the above Environment Construction Tutorial, you have everything installed.
-
-## Section I: Install Prerequisites
-
-On our Ubuntu OS, Apache, PHP, GD library and MySQL was installed using apt-get. The commands are listed below. You can also use yum, rpm or dpkg etc depending on the operating system, speak to your systems administrator about it.
-
-```python
-shell> sudo apt-get install apache2
-shell> sudo apt-get install php5
-shell> sudo apt-get install libapache2-mod-php5
-shell> sudo apt-get install mysql-server
-shell> sudo apt-get install php5-mysql
-shell> sudo apt-get install php5-gd
-```
 
 ## Section II: MySQL Database Setup
 
