@@ -103,8 +103,11 @@ cp php.ini-development /usr/local/php-5.3.20/php.ini
 vim php.ini
 ```
 * Open the mysql and gd extensions. Find and modify the following:
+
 ![phpModify_1](https://github.com/qunfengdong/GSV/blob/master/img/phpModify_1.png)
+
 * Locate cgi.fix_pathinfo= and modify it as follows:
+
 ![phpModify_2](https://github.com/qunfengdong/GSV/blob/master/img/phpModify_2.png)
 
 ## Section III: Configure Nginx and php-fpm so that web pages can use php5 that you just installed
@@ -144,7 +147,7 @@ cd /usr/local/nginx/html/
 vim phptest.php
 ```
 input:
-```bash
+```
 <?php
 phpinfo();
 ?>
@@ -154,8 +157,9 @@ phpinfo();
 ![phpFinal](https://github.com/qunfengdong/GSV/blob/master/img/phpFinal.png)
 
 
-System Requirements
--------------------
+# GSV Installation Guide
+
+## System Requirements
 
 The current version of Genome Synteny Viewer was only tested on Ubuntu 10.04 OS. The minimum requirements include: 
 * Apache 1.3 or higher (http://www.apache.org)
@@ -163,8 +167,9 @@ The current version of Genome Synteny Viewer was only tested on Ubuntu 10.04 OS.
 * MySQL 5.0 or higher (http://dev.mysql.com/)
 * GD library. (http://php.net/manual/en/book.image.php)
 
-Section I: Install Prerequisites
---------------------------------
+If you successfully completed the above Environment Construction Tutorial, you have everything installed.
+
+## Section I: Install Prerequisites
 
 On our Ubuntu OS, Apache, PHP, GD library and MySQL was installed using apt-get. The commands are listed below. You can also use yum, rpm or dpkg etc depending on the operating system, speak to your systems administrator about it.
 
@@ -177,8 +182,7 @@ shell> sudo apt-get install php5-mysql
 shell> sudo apt-get install php5-gd
 ```
 
-Section II: MySQL Database Setup
---------------------------------
+## Section II: MySQL Database Setup
 
 GSV requires a MySQL database to store data. Listed below are steps to create a user, database, and 2 tables within the database
 
@@ -221,9 +225,7 @@ mysql> CREATE TABLE IF NOT EXISTS `userinfo` (
 
 If you use different database settings, please refer to the MySQL document for instructions on how to configure the database.
 
-
-Section III: Set up the Genome Synteny Viewer
------------------------------------------
+## Section III: Set up the Genome Synteny Viewer
 
 1. Download the source code from GSV website http://bioinfo.lumc.edu/gsv/software.php
 
@@ -264,9 +266,13 @@ The script cleanup.php will be executed at 4.30 AM everyday morning.
 
 8. GSV uses mail function from PHP to send email to users. Speak to your system administrator to provide required information in PHP configuration file called 'php.ini'.
 
-9. This completes installation, you can now open Install/index.php (i.e., http://<YOUR_SERVER_DOMAIN_NAME>/gsv/Install/), which verifies prerequisites, database setup and installation. YOUR_SERVER_DOMAIN_NAME refers to the domain name of your server.
+9. This completes installation, you can now open Install/index.php (i.e., http://<YOUR_SERVER_DOMAIN_NAME>/gsv/Install/), which verifies prerequisites, database setup and installation. YOUR_SERVER_DOMAIN_NAME refers to the domain name of your server. You should see the successfully installed GSV as the following:
 
-Section IV: Additional notes:
+![GSVfinish_1](https://github.com/qunfengdong/GSV/blob/master/img/GSVfinish_1.png)
+![GSVfinish_2](https://github.com/qunfengdong/GSV/blob/master/img/GSVfinish_2.png)
+
+
+### Section IV: Additional notes:
 
 1. For trouble shooting, please use contact details at http://bioinfo.lumc.edu/gsv/support.php 
 2. Refer to ARCHITECTURE.txt file to understand the architecture of GSV.
