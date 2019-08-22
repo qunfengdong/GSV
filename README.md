@@ -54,7 +54,7 @@ make install
 vim /usr/local/nginx/conf/nginx.conf
 ```
 
-![nginxConfig]("https://github.com/qunfengdong/GSV/blob/master/img/nginxConfig.png")
+![nginxConfig](https://github.com/qunfengdong/GSV/blob/master/img/nginxConfig.png)
 
 System Requirements
 -------------------
